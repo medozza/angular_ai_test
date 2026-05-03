@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "projectProfile": "angular-typescript-local-dev",
+  "agents": [
+    {
+      "id": "angular-implementer",
+      "description": "Implements Angular and TypeScript features following repository conventions.",
+      "defaultModel": "gpt-5.3-codex",
+      "useCases": ["feature-implementation", "refactoring", "bug-fixes"]
+    },
+    {
+      "id": "code-reviewer",
+      "description": "Reviews diffs for logic, security, and runtime issues with high signal.",
+      "defaultModel": "gpt-5.3-codex",
+      "useCases": ["pull-request-review", "risk-checks"]
+    },
+    {
+      "id": "test-runner",
+      "description": "Runs build and tests, reporting concise pass/fail outcomes.",
+      "defaultModel": "claude-haiku-4.5",
+      "useCases": ["ci-validation", "regression-checks"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "customize-cloud-agent",
+      "enabled": true,
+      "purpose": "Maintains and evolves .github/workflows/copilot-setup-steps.yml"
+    },
+    {
+      "name": "microsoft-foundry",
+      "enabled": false,
+      "purpose": "Enable only when Foundry deployment/evaluation work is in scope"
+    }
+  ],
+  "plugins": [
+    {
+      "name": "angular-cli",
+      "type": "mcp-server",
+      "configPath": ".vscode/mcp.json#servers.angular-cli"
+    },
+    {
+      "name": "filesystem",
+      "type": "mcp-server",
+      "configPath": ".vscode/mcp.json#servers.filesystem"
+    },
+    {
+      "name": "git",
+      "type": "mcp-server",
+      "configPath": ".vscode/mcp.json#servers.git"
+    },
+    {
+      "name": "fetch",
+      "type": "mcp-server",
+      "configPath": ".vscode/mcp.json#servers.fetch"
+    }
+  ]
+}

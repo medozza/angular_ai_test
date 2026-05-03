@@ -53,3 +53,10 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+## Copilot CLI Project Settings
+
+- Use `.github/copilot-settings.json` as the source of truth for project agent, skill, and plugin defaults.
+- Use `.vscode/mcp.json` for MCP plugin/server definitions used by local Copilot tooling.
+- Keep the cloud environment reproducible with `.github/workflows/copilot-setup-steps.yml`.
+- Keep secrets out of repository files. Use GitHub environment secrets/variables for credentials.

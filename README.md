@@ -57,3 +57,24 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Copilot CLI Settings
+
+- Project settings: `.github/copilot-settings.json`
+- Cloud agent bootstrap: `.github/workflows/copilot-setup-steps.yml`
+- MCP plugins/servers: `.vscode/mcp.json`
+
+## Deploy to GitHub Pages
+
+This app can be deployed as a repository site (`https://<user>.github.io/<repo>/`) using GitHub Actions.
+
+1. In repository settings, set **Pages** source to **GitHub Actions**.
+2. Push to the repository default branch (or run the workflow manually) to trigger `.github/workflows/deploy-pages.yml`.
+3. The workflow builds a static artifact, sets `base-href` to `/<repo>/`, and deploys it to Pages.
+4. On the first run, open **Actions** and confirm both `build` and `deploy` jobs succeed, then use the `github-pages` environment URL.
+
+For local verification, run:
+
+```bash
+npm run build:pages -- --base-href "/<repo>/"
+```
