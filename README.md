@@ -72,6 +72,7 @@ This app can be deployed as a repository site (`https://<user>.github.io/<repo>/
 2. Push to the repository default branch (or run the workflow manually) to trigger `.github/workflows/deploy-pages.yml`.
 3. The workflow builds a static artifact, sets `base-href` to `/<repo>/`, and deploys it to Pages.
 4. On the first run, open **Actions** and confirm both `build` and `deploy` jobs succeed, then use the `github-pages` environment URL.
+5. If `Setup Pages` fails with `Resource not accessible by integration`, ensure Pages is enabled once in **Settings → Pages → Build and deployment → GitHub Actions**.
 
 For local verification, run:
 
